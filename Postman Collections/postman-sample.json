@@ -1,0 +1,371 @@
+{
+	"info": {
+		"_postman_id": "f7433385-9364-4453-9804-e1c4a67fb38d",
+		"name": "CommonsManagementNew",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "sign_in",
+			"id": "5bdbef62-23fe-4dbd-a372-3d4583385a0c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"session\": {\n        \"name\": \"pitdesign\",\n        \"password\": \"password\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/session/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"session",
+						""
+					],
+					"query": [
+						{
+							"key": "session[name]",
+							"value": "pitdesign",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "session[password]",
+							"value": "password",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "bef91bde-f443-47d4-b354-5ce986cdffcb",
+					"name": "sign_in",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"session\": {\n        \"name\": \"pitdesign\",\n        \"password\": \"password\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/session/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"session",
+								""
+							],
+							"query": [
+								{
+									"key": "session[name]",
+									"value": "pitdesign",
+									"disabled": true
+								},
+								{
+									"key": "session[password]",
+									"value": "password",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 19 Jan 2024 02:36:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "X-CSRF-Token",
+							"value": "5fb5UFm9XoAmQAigduv2hOYl6zhSXEedW0pUtwy+mZ8w+CXSMisZrBIv4+An58JYLoVkxBUZ1Y7xGhNumEAjVQ=="
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ba90deca394a216d11ea0dc0728e897b\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "_api_session=EQH8qYOExjaLIiwi8yoXFUEUHiGTMzekp5YrB640WS8WaQPGVofsC2Mc7HeDlKqlL98uj9P6SIUHu0iP3sOvCa%2FvLtsB7HOkCxr3gDSXBrvd2njIniAEOF6qCzV10vGwr2FnR3AHN7Fd07Zeu76mKRPRu6VRCk8nTUy9TRbpc%2FttJCC1JTSZKjRwIAXhafAGo3efsqZj45RGFWUbV%2FtoS7E0BVH%2F2Jyoqxq1HuxuFQgVNSofXTQmvYL%2Fwi6wajG0SzehAbefnZdh5PENzUkc8IDmZHz1lqP1QOVGieiAZddrOCKymka1XCj4bxSMeplFe8Dt9ijUUW3Zp2ZxpYHzyS4FgDY%3D--gLa%2BHcpAKQ0xzhoX--iEG%2Bbe9K1%2B%2BLnGnf84soVw%3D%3D; path=/; HttpOnly; SameSite=Lax"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "90c3eb67-6df7-4d9a-a003-5c24957eaf11"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.222286"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"id\": 1,\n    \"name\": \"ピットデザイン\",\n    \"role_id\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "basic information",
+			"id": "85ce8be8-481d-4648-96b9-8a9e99c6fafb",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-CSRF-Token",
+						"value": "Qiztu17H6Dru6Aj3Y0ZHMYr7i/jkaWQCXMuhXM7WJfQweHjM9Yhg7YgsBCvvSyTOjxc4JcHTZCEfeiFzstk1Lg==",
+						"description": "CSRFトークン",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASE_URL}}/api/get_basic_information?id=10001",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"get_basic_information"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "10001",
+							"description": "サーバーID"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "7adb41ad-4d7f-4ed8-905e-a43e5cd107ab",
+					"name": "basic information",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-CSRF-Token",
+								"value": "Qiztu17H6Dru6Aj3Y0ZHMYr7i/jkaWQCXMuhXM7WJfQweHjM9Yhg7YgsBCvvSyTOjxc4JcHTZCEfeiFzstk1Lg==",
+								"description": "CSRFトークン",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/api/get_basic_information?id=10001",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"get_basic_information"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "10001",
+									"description": "サーバーID"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 19 Jan 2024 03:53:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-CSRF-Token",
+							"value": "TNDq3sWIz/b4ga3ef/5v6+qn9FT2jkMatSmVLIJcUU7Sn6fK3tGamuwjH5pGGq5YhLed95K8bML/1dD9EqZliA=="
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"880410b22c152e39deb7a35afe29cc2a\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "_api_session=oLnsZpThYC7eMJn4uJoQDvvoUNv4HieN8hunE4v6hAsoVXi4CwO%2B2CGrJ5FzwgceUx39yTsBLzN9gEdKy6oypqdTVF%2FdvqFn%2FYMtckrqdxLc7pJj1gmCq2ope0OHLRv8dS%2F%2BSUndpab4P5gBDMMABvYbDva509cNbro2K6szfDlNvw3vG2zZyJN8GWjPcPu6p563N5cdsUhFuOPPiN%2FSZc6XyDOHrVgMDju1Q9txhK6Jblzv6ggX13t4u0ag2oxDX%2BpY3skbdF%2B9m2YEqWLvOCwIb7fFvt5sJuGkgBUV2qXWVByPPWG5GeG9RTtTqbI2bq3rv7Wjyv65MJ8b4tfvQytq2zY%3D--rAaicJsgtMIKMqqX--scnk7Ankp%2FrT5D%2FPrk3boQ%3D%3D; path=/; HttpOnly; SameSite=Lax"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "52174ba7-8c39-4d5c-8905-f9e54f350bf6"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.860533"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"parking_data\": [\n        {\n            \"PARKING_NAME\": \"関西ｽｰﾊﾟｰ高石駅前店\",\n            \"PARKING_ID\": 1,\n            \"RE_CHARGE_TIME\": 20,\n            \"WAIT_EXIT_TIME\": 120,\n            \"SERVICE_ENTRANT_TIME\": 1,\n            \"HOLIDAY_SERVICE_ENTRANT_TIME\": 1,\n            \"WAIT_ENTRANT_TIME\": 15,\n            \"IP_ADDRESS\": \"115.179.223.41\",\n            \"MYSQL_PORT\": \"3306\",\n            \"SOCKET_PORT\": \"55000\",\n            \"UNPAID_INVOICES_FLG\": 1,\n            \"ERROR_IS_FREE_CHECKOUT_FLG\": 1,\n            \"USE_HOLIDAY_CALENDER_FLG\": 1,\n            \"COLLECT_CASHLESS_FLG\": 0\n        }\n    ],\n    \"fee_list_url\": null,\n    \"get_basic_information_success_flg\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "servers",
+			"id": "c852b4f3-0415-4728-baab-20850c98021b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{BASE_URL}}/api/servers"
+			},
+			"response": [
+				{
+					"id": "dc8d1d7a-8d84-4fa5-b4c5-a8d96303654e",
+					"name": "servers",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BASE_URL}}/api/servers"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 19 Jan 2024 03:54:12 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-CSRF-Token",
+							"value": "p1Rd4TF6PM4cLBPpqU9ijcqV8C72p5fmaQe9kpz/TxE5GxD1KiNpogiOoa2Qq6M+pIWZjZKVuD4j+/hDDAV71w=="
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"926b797596de6c46f2d1642d5cf5c5c9\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "_api_session=noc17HshDyk3O9d5JFAb4Sa5im%2FGCGWJwrXcFitNvGNYlyZ74TH0RQYY9qErTN2G%2F9XnljKPFY7ntOvpe%2FCH8PzZKNzkAb0SyLoRr4votU5aAkJb1j5Q2VmZr5IcptaG6RLm8ZK9wc6E90A%2FCLzc9MCm1Yf2sqUdWSkGACGnbBiiWj0HjeO3kCb33GhKRWdg5p686WeNotwKZ4goii51SN4jFaptVAanRhFjt617cnff63cG89cPtQVHoyMt8yI6tzrxW%2B6j1XRdlLZjEIo%2FyYE5EIZ34uFLChyGWWHPL5OTvX8x7hBgNQCGDZjmZmVS%2B4twz%2FyxwMs5I392JH609CTqpP4%3D--hYJ5vGzVAzJpt10b--dwhmDtjxfr5WPDExKkCcIw%3D%3D; path=/; HttpOnly; SameSite=Lax"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "b070d60f-80da-4238-b8bd-a43e41114719"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.019374"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "[\n    {\n        \"id\": 10001,\n        \"lid\": 1,\n        \"gid\": 1,\n        \"pid\": 1,\n        \"address\": \"smp2.pitdesign.jp\",\n        \"port\": \"3306\",\n        \"note\": \"関西スーパー高石駅前\",\n        \"fax_number\": null,\n        \"unpaid_del_cnt_setting\": 0,\n        \"drive_pickup_shopcode\": null,\n        \"outage_flag\": false,\n        \"daily_sales_forecast\": null,\n        \"max_free_time\": null,\n        \"white_list_delete_period\": null,\n        \"updated_at\": \"2022-03-29T17:40:03.000+09:00\",\n        \"unpaid_share_flg\": false\n    },\n    {\n        \"id\": 10111,\n        \"lid\": 101,\n        \"gid\": 1,\n        \"pid\": 1,\n        \"address\": \"smp2-104.pitdesign.jp\",\n        \"port\": \"3306\",\n        \"note\": \"コースカベイサイドストアーズ駐車場\",\n        \"fax_number\": null,\n        \"unpaid_del_cnt_setting\": 0,\n        \"drive_pickup_shopcode\": null,\n        \"outage_flag\": false,\n        \"daily_sales_forecast\": null,\n        \"max_free_time\": null,\n        \"white_list_delete_period\": null,\n        \"updated_at\": \"2024-01-19T11:33:35.000+09:00\",\n        \"unpaid_share_flg\": false\n    },\n    {\n        \"id\": 10162,\n        \"lid\": 149,\n        \"gid\": 1,\n        \"pid\": 1,\n        \"address\": \"smp2-152.pitdesign.jp\",\n        \"port\": \"3306\",\n        \"note\": \"アリオ札幌\",\n        \"fax_number\": null,\n        \"unpaid_del_cnt_setting\": 0,\n        \"drive_pickup_shopcode\": null,\n        \"outage_flag\": false,\n        \"daily_sales_forecast\": null,\n        \"max_free_time\": null,\n        \"white_list_delete_period\": null,\n        \"updated_at\": \"2024-01-19T11:33:35.000+09:00\",\n        \"unpaid_share_flg\": false\n    },\n    {\n        \"id\": 50003,\n        \"lid\": 50003,\n        \"gid\": 1,\n        \"pid\": 1,\n        \"address\": \"smpdemo3.sub.pitdesign.jp\",\n        \"port\": \"3306\",\n        \"note\": \"demo3\",\n        \"fax_number\": null,\n        \"unpaid_del_cnt_setting\": 0,\n        \"drive_pickup_shopcode\": null,\n        \"outage_flag\": false,\n        \"daily_sales_forecast\": null,\n        \"max_free_time\": null,\n        \"white_list_delete_period\": null,\n        \"updated_at\": \"2018-04-25T12:49:58.000+09:00\",\n        \"unpaid_share_flg\": false\n    },\n    {\n        \"id\": 50005,\n        \"lid\": 50005,\n        \"gid\": 1,\n        \"pid\": 1,\n        \"address\": \"smpdemo5.sub.pitdesign.jp\",\n        \"port\": \"3306\",\n        \"note\": \"demo5\",\n        \"fax_number\": null,\n        \"unpaid_del_cnt_setting\": 0,\n        \"drive_pickup_shopcode\": null,\n        \"outage_flag\": false,\n        \"daily_sales_forecast\": null,\n        \"max_free_time\": null,\n        \"white_list_delete_period\": null,\n        \"updated_at\": \"2018-04-25T12:49:58.000+09:00\",\n        \"unpaid_share_flg\": false\n    },\n    {\n        \"id\": 50007,\n        \"lid\": 50100,\n        \"gid\": 1,\n        \"pid\": 1,\n        \"address\": \"devweb.sub.pitdesign.jp\",\n        \"port\": \"3306\",\n        \"note\": \"devweb\",\n        \"fax_number\": \"\",\n        \"unpaid_del_cnt_setting\": 0,\n        \"drive_pickup_shopcode\": null,\n        \"outage_flag\": false,\n        \"daily_sales_forecast\": null,\n        \"max_free_time\": null,\n        \"white_list_delete_period\": null,\n        \"updated_at\": \"2022-05-18T10:04:22.000+09:00\",\n        \"unpaid_share_flg\": false\n    },\n    {\n        \"id\": 50100,\n        \"lid\": 50100,\n        \"gid\": 1,\n        \"pid\": 1,\n        \"address\": \"devweb.sub.pitdesign.jp\",\n        \"port\": \"3306\",\n        \"note\": \"devweb\",\n        \"fax_number\": null,\n        \"unpaid_del_cnt_setting\": 0,\n        \"drive_pickup_shopcode\": null,\n        \"outage_flag\": false,\n        \"daily_sales_forecast\": null,\n        \"max_free_time\": null,\n        \"white_list_delete_period\": null,\n        \"updated_at\": \"2022-05-18T10:04:22.000+09:00\",\n        \"unpaid_share_flg\": false\n    },\n    {\n        \"id\": 199999,\n        \"lid\": 99999,\n        \"gid\": 1,\n        \"pid\": 1,\n        \"address\": \"appdemo.sub.pitdesign.jp\",\n        \"port\": \"3306\",\n        \"note\": \"スマパモバイルアプリ用\",\n        \"fax_number\": null,\n        \"unpaid_del_cnt_setting\": 0,\n        \"drive_pickup_shopcode\": null,\n        \"outage_flag\": false,\n        \"daily_sales_forecast\": null,\n        \"max_free_time\": null,\n        \"white_list_delete_period\": null,\n        \"updated_at\": \"2019-07-23T16:28:16.000+09:00\",\n        \"unpaid_share_flg\": false\n    }\n]"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "09d64a26-8168-48da-90d7-76d4548f5c07",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "e15bf10d-d88f-49b9-bde3-0843cf2b7cac",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "https://commons-api-stg.sub.pitdesign.jp",
+			"type": "string"
+		}
+	]
+}
